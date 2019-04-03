@@ -2,9 +2,7 @@ language: cpp
 
 matrix:
     include:
-        - os: linux
-          sudo: required
-          dist: xenial
+        - os: windows
 
 before_install:
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
@@ -12,8 +10,6 @@ before_install:
         sudo apt-get install -y --no-install-recommends libboost-all-dev;
       fi
     - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
-        SET DSN_AUTO_TEST=1;
-        run.cmd setup-env;
       fi
 
 script:
@@ -28,6 +24,8 @@ script:
         ./run.sh test;
       fi
     - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
+        SET DSN_AUTO_TEST=1;
+        run.cmd setup-env;
         run.cmd build Debug .\build build_plugins;
         run.cmd install Debug .\build;
         run.cmd start_zk;
