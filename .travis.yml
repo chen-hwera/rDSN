@@ -15,7 +15,7 @@ script:
         bash test.sh;
       fi
     - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
-        powershell -ExecutionPolicy Bypass -File test.ps1
+        powershell -ExecutionPolicy Bypass -File test.ps1;
       fi
 
 notifications:
