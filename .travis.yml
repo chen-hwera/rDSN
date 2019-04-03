@@ -22,6 +22,7 @@ script:
         ./run.sh test;
       fi
     - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
+        powershell;
         SET DSN_AUTO_TEST=1;
         run.cmd setup-env;
         run.cmd build Debug .\build build_plugins;
