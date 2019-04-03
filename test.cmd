@@ -1,7 +1,7 @@
-SET DSN_TRAVIS=1 && ^
-SET DSN_AUTO_TEST=1 && ^
-run.cmd setup-env && ^
-run.cmd build Debug .\build build_plugins && ^
-run.cmd install Debug .\build && ^
-run.cmd start_zk && ^
-run.cmd test Debug .\build
+SET DSN_TRAVIS=1
+SET DSN_AUTO_TEST=1
+CALL run.cmd setup-env
+CALL run.cmd build Debug .\build build_plugins
+CALL run.cmd install Debug .\build
+CALL run.cmd start_zk
+CALL run.cmd test Debug .\build
