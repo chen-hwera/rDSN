@@ -8,8 +8,8 @@ matrix:
 
 before_install:
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-        sudo apt-get install -y wget mono-xbuild libaio-dev
-        sudo apt-get install -y --no-install-recommends libboost-all-dev
+        sudo apt-get install -y wget mono-xbuild libaio-dev;
+        sudo apt-get install -y --no-install-recommends libboost-all-dev;
       fi
     - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
         run.cmd setup-env
@@ -17,13 +17,13 @@ before_install:
 
 script:
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-        ./run.sh format
-        ulimit -c unlimited -S
-        this_path=`readlink -f $0`
-        export DSN_ROOT=`dirname $this_path`
-        ./run.sh build --build_plugins
-        ./run.sh install
-        ./run.sh test
+        ./run.sh format;
+        ulimit -c unlimited -S;
+        this_path=`readlink -f $0`;
+        export DSN_ROOT=`dirname $this_path`;
+        ./run.sh build --build_plugins;
+        ./run.sh install;
+        ./run.sh test;
       fi
 
 notifications:
