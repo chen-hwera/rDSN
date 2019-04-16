@@ -50,7 +50,7 @@ CALL "%bin_dir%\echoc.exe" 2 DSN_ROOT\lib and DSN_ROOT\bin are added to PATH env
 :main
 
 SET DSN_TMP_CMAKE_VERSION=3.14.1
-SET DSN_TMP_BOOST_VERSION=1_64_0
+SET DSN_TMP_BOOST_VERSION=1_70_0
 SET DSN_TMP_WGET_OPT=--no-check-certificate -nv
 
 CALL :%1 %1 %2 %3 %4 %5 %6 %7 %8 %9

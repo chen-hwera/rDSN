@@ -59,7 +59,7 @@ GOTO error
 
 :find_vs2019
 CALL "%bin_dir%\echoc.exe" 2 "Find Visusal Studio 2019."
-SET DSN_TMP_BOOST_LIB=lib64-msvc-14.1
+SET DSN_TMP_BOOST_LIB=lib64-msvc-14.2
 SET DSN_TMP_CMAKE_TARGET=Visual Studio 16 2019
 GOTO start_build
 
