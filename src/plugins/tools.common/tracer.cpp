@@ -346,7 +346,7 @@ namespace dsn {
             return "Not implemented";
         }
 
-        void tracer::install(service_spec& spec)
+        void tracer::install(service_spec& spec_in)
         {
             auto trace = dsn_config_get_value_bool("task..default", "is_trace", false,
                 "whether to trace tasks by default");
